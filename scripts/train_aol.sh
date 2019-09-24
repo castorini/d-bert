@@ -1,1 +1,0 @@
-python -u train_awd_lstm.py --epochs 15 --nlayers 3 --emsize 400 --nhid 1800 --alpha 0 --beta 0 --dropoute 0 --dropouth 0.1 --dropouti 0.1 --dropout 0.3 --wdrop 0.1 --wdecay 1.2e-6 --batch_size 512 --optimizer adam --lr 1e-3 --save aol.pt --when 5 10 --log-interval 10

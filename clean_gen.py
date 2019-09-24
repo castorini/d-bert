@@ -1,4 +1,4 @@
-from args import OptionEnum, opt, add_dict_options
+from args import opt, add_dict_options
 import argparse
 import re
 

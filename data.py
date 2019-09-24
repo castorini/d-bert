@@ -1,11 +1,10 @@
 from collections import Counter
 import glob
 import os
-import random
 
 from tqdm import tqdm
+import torch
 import pandas as pd
-import torch.nn as nn
 import torch.utils.data as tud
 
 
@@ -54,86 +53,6 @@ class SingleSentenceDataset(tud.Dataset):
             for idx in (0, 1): dfs[idx] = dfs[idx][dfs[idx][label_column] == filter_label]
         sentences_lst = [[f' \t '.join((x, y)) for x, y in zip(df[column1], df[column2])] for df in dfs]
         return list(map(cls, sentences_lst))
-
-
-class AOLQueryDataset(tud.Dataset):
-
-    def __init__(self, queries, users):
-        super().__init__()
-        self.queries = queries
-        self.users = users
-        self.user_set = set(self.users)
-        self._count()
-
-    def _count(self):
-        self.user_counter = Counter()
-        for q, u in zip(self.queries, self.users):
-            self.user_counter[u] += 1
-
-    def count_queries_from(self, user_set):
-        return sum(self.user_counter.get(x) for x in user_set)
-
-    def filter(self, user_set):
-        new_users = []
-        new_queries = []
-        for user, query in zip(self.users, self.queries):
-            if user in user_set:
-                new_users.append(user)
-                new_queries.append(query)
-        self.users = new_users
-        self.queries = new_queries
-        self.user_set = set(new_users)
-        self._count()
-
-    def __getitem__(self, idx):
-        return self.users[idx], self.queries[idx]
-
-    def __len__(self):
-        return len(self.queries)
-
-    def sample_split(self, split_prob):
-        users = ([], [])
-        queries = ([], [])
-        for u, q in zip(self.users, self.queries):
-            idx = int(random.random() < split_prob)
-            users[idx].append(u)
-            queries[idx].append(q)
-        return [AOLQueryDataset(queries[idx], users[idx]) for idx in range(2)]
-
-    @classmethod
-    def splits(cls, folder, val_prob=0.05, test_prob=0.05, use_tqdm=True):
-        dfs = load_clean_aol(folder, use_tqdm=use_tqdm)
-        df = pd.concat(dfs)
-        base_ds = cls(list(df['Query']), list(df['AnonID']))
-        training_ds, val_ds  = base_ds.sample_split(val_prob + test_prob)
-        dev_ds, test_ds = val_ds.sample_split(test_prob / (val_prob + test_prob))
-        return training_ds, dev_ds, test_ds
-
-    @classmethod
-    def splits_six(cls,
-                   folder,
-                   min_test_size=1000000,
-                   val_prob=0.02,
-                   use_tqdm=True,
-                   max_len=128):
-        dfs = load_clean_aol(folder, use_tqdm=use_tqdm)
-        training_df = pd.concat(dfs[:6])
-
-        training_ds = cls(list(training_df['Query']), list(training_df['AnonID']))
-        test_df = pd.concat(dfs[6:])
-
-        test_ds = cls(list(test_df['Query']), list(test_df['AnonID']))
-        disjoint_users = list(test_ds.user_set - training_ds.user_set)
-        random.shuffle(disjoint_users)
-        test_user_set = set()
-        for user in disjoint_users:
-            test_user_set.add(user)
-            n_queries = test_ds.count_queries_from(test_user_set)
-            if n_queries > min_test_size:
-                break
-        test_ds.filter(test_user_set)
-        training_ds, dev_ds = training_ds.sample_split(val_prob)
-        return training_ds, dev_ds, test_ds
 
 
 class Dictionary(object):

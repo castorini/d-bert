@@ -1,8 +1,7 @@
 from collections import Counter
 import argparse
-import sys
 
-from pytorch_pretrained_bert import GPT2Tokenizer, GPT2LMHeadModel, BertAdam
+from pytorch_transformers import GPT2Tokenizer, TransfoXLTokenizer
 from torch.distributions.categorical import Categorical
 from tqdm import tqdm
 import torch

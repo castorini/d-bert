@@ -3,13 +3,13 @@ import argparse
 import random
 import sys
 
-from pytorch_pretrained_bert import TransfoXLTokenizer, TransfoXLLMHeadModel, BertAdam
+from pytorch_transformers import TransfoXLTokenizer, TransfoXLLMHeadModel
 from tqdm import tqdm
 import torch
 import torch.nn as nn
 
 from args import add_dict_options, opt, OptionEnum
-from build_gpt_sampler import PrefixSampler, SampleBatch
+from build_sampler import SampleBatch
 from utils import set_seed, dual_print
 
 

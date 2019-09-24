@@ -3,7 +3,7 @@ import argparse
 import random
 import sys
 
-from pytorch_pretrained_bert import GPT2Tokenizer, GPT2LMHeadModel, BertAdam, TransfoXLTokenizer, TransfoXLLMHeadModel,\
+from pytorch_transformers import GPT2Tokenizer, GPT2LMHeadModel, TransfoXLTokenizer, TransfoXLLMHeadModel, \
     BertTokenizer, BertForMaskedLM
 from tqdm import tqdm
 import torch
@@ -14,7 +14,6 @@ from args import add_dict_options, opt, OptionEnum
 from build_sampler import PrefixSampler, SampleBatch
 from finetune_bert import augment_texts
 from finetune_gpt import gpt_encode, EOS_TOKEN
-from finetune_transfo import transfo_encode
 from utils import set_seed, dual_print
 
 
