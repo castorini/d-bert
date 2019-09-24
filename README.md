@@ -1,2 +1,2 @@
-# typeahead-experiments
-Personalized typeahead experiments.
+# D-BERT
+Distilling models using natural language generation.
