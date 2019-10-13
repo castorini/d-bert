@@ -1,0 +1,8 @@
+{
+    "_inherits_": ["base.json", "sst2.json"],
+    "output_channel": 100,
+    "words_dim": 300,
+    "clip_grad": 30000,
+    "mode": "non-static",
+    "dropout": 0.5
+}

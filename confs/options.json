@@ -1,0 +1,78 @@
+[
+    {
+        "name": "workspace",
+        "type": "str",
+        "default": "local_workspace",
+        "help": "The workspace directory."
+    }, {
+        "name": "dataset_path",
+        "type": "str",
+        "help": "Path to the dataset."
+    }, {
+        "name": "dataset_name",
+        "type": "str",
+        "help": "Path to the dataset."
+    }, {
+        "name": "seed",
+        "type": "int",
+        "help": "The seed to use."
+    }, {
+        "name": "epochs",
+        "type": "int",
+        "help": "epoch number"
+    },{
+        "name": "distill_lambda",
+        "type": "float"
+    }, {
+        "name": "distill_temperature",
+        "type": "float"
+    }, {
+        "name": "ce_lambda",
+        "type": "float"
+    }, {
+        "name": "lookup_word",
+        "type": "str"
+    }, {
+        "name": "batch_size",
+        "type": "int"
+    }, {
+        "name": "dropout",
+        "type": "float"
+    }, {
+        "name": "lr",
+        "type": "float"
+    }, {
+        "name": "mode",
+        "type": "str"
+    }, {
+        "name": "load_last_checkpoint",
+        "action": "store_true"
+    }, {
+        "name": "load_best_checkpoint",
+        "action": "store_true"
+    }, {
+        "name": "train_file",
+        "type": "str"
+    }, {
+        "name": "dev_file",
+        "type": "str"
+    }, {
+        "name": "test_file",
+        "type": "str"
+    }, {
+        "name": "eval_test_only",
+        "action": "store_true"
+    }, {
+        "name": "export_eval_labels",
+        "action": "store_true"
+    }, {
+        "name": "hidden_size",
+        "type": "int"
+    }, {
+        "name": "use_maxpool",
+        "action": "store_true"
+    }, {
+        "name": "float_score",
+        "action": "store_true"
+    }
+]

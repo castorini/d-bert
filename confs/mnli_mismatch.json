@@ -1,0 +1,10 @@
+{
+    "dataset_path": "/home/linqing/lq/dataset/MNLI_mask_window/digit",
+    "dataset_name": "mnli_mismatch",
+    "logits_path": "",
+    "vectors_file": "GoogleNews-vectors-negative300.txt",
+    "vectors_dir": "/home/linqing/lq/dataset/embeddings",
+    "train_file": "train.tsv",
+    "dev_file": "dev.tsv",
+    "test_file": "test.tsv"
+}

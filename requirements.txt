@@ -1,0 +1,7 @@
+git+https://github.com/daemon/argconf
+easydict
+torchtext==0.3.1
+tqdm
+pytorch_pretrained_bert
+nltk
+allennlp

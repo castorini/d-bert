@@ -1,0 +1,10 @@
+{
+    "dataset_path": "/mnt/nvme/glue/SST-2",
+    "dataset_name": "sst2",
+    "logits_path": "local_data/sst2_logits.pt",
+    "vectors_file": "GoogleNews-vectors-negative300.txt",
+    "vectors_dir": "/mnt/nvme/Castor-data/embeddings/word2vec",
+    "train_file": "train.tsv",
+    "dev_file": "dev.tsv",
+    "test_file": "test.tsv"
+}

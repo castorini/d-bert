@@ -1,0 +1,20 @@
+{
+    "distill_lambda": 1,
+    "distill_temperature": 3,
+    "ce_lambda": 1,
+    "seed": 0,
+    "workspace": "local_workspace",
+    "batch_size": 50,
+    "optimizer": "adam",
+    "epochs": 20,
+    "early_stop": true,
+    "lr": 1,
+    "device": "cuda:0",
+    "use_data_parallel": false,
+    "load_last_checkpoint": false,
+    "load_best_checkpoint": false,
+    "eval_test_only": false,
+    "export_eval_labels": false,
+    "use_maxpool": false,
+    "float_score": false
+}

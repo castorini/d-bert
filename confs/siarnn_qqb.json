@@ -1,0 +1,15 @@
+{
+    "_inherits_": ["base.json", "qqb.json"],
+    "output_channel": 100,
+    "words_dim": 300,
+    "clip_grad": 30000,
+    "dropout": 0.2,
+    "n_feature_maps": 200,
+    "rnn_type": "lstm",
+    "hidden_size": 300,
+    "lr": 5e-4,
+    "fc_size": 200,
+    "batch_size": 16,
+    "weight_decay": 1e-3,
+    "mode": "multichannel"
+}

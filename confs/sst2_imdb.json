@@ -1,0 +1,7 @@
+{
+    "dataset_path": "~/lq/dataset/sst2/sst_with_imdb",
+    "dataset_name": "sst_with_imdb",
+    "logits_path": "local_data/sst2_logits.pt",
+    "vectors_file": "GoogleNews-vectors-negative300.txt",
+    "vectors_dir": "~/lq/dataset/embeddings"
+}

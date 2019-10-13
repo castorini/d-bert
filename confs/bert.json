@@ -1,0 +1,5 @@
+{
+    "bert_model": "/mnt/nvme/bert/uncased_L-24_H-1024_A-16",
+    "input_file": "/mnt/nvme/wikitext/wikitext-103/wiki.train.tokens",
+    "output_folder": "/mnt/hdd/wikitext-103/vecs"
+}
