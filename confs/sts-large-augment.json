@@ -1,0 +1,10 @@
+{
+    "_inherits_": "config.json",
+    "workspace": "sts4e-5",
+    "n_labels": 1,
+    "task_name": "raw_pair",
+    "data_dir": "sts-window-augment",
+    "model_file": "/home/anonymized/uncased_L-24_H-1024_A-16",
+    "export": "",
+    "eval_batch_size": 128
+}

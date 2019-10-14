@@ -1,0 +1,9 @@
+{
+    "_inherits_": "config.json",
+    "workspace": "local_sst2_lm_workspace",
+    "n_labels": 2,
+    "data_dir": "/home/anonymized/sst2",
+    "model_file": "/home/anonymized/uncased_L-24_H-1024_A-16",
+    "train_file": "/home/anonymized/train_lm.tsv",
+    "eval_batch_size": 512
+}

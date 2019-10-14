@@ -1,0 +1,10 @@
+{
+    "_inherits_": "config.json",
+    "workspace": "cola_wkspc2e-5",
+    "n_labels": 2,
+    "task_name": "imdb",
+    "data_dir": "/home/anonymized/CoLA",
+    "model_file": "/home/anonymized/uncased_L-24_H-1024_A-16",
+    "export": "cola-large-logits.pt",
+    "eval_batch_size": 512
+}

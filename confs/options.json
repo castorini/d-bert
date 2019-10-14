@@ -13,14 +13,10 @@
         "type": "str",
         "help": "Path to the dataset."
     }, {
-        "name": "seed",
-        "type": "int",
-        "help": "The seed to use."
-    }, {
         "name": "epochs",
         "type": "int",
         "help": "epoch number"
-    },{
+    }, {
         "name": "distill_lambda",
         "type": "float"
     }, {
@@ -74,5 +70,67 @@
     }, {
         "name": "float_score",
         "action": "store_true"
+    }, {
+        "name": "model_file",
+        "type": "str",
+        "help": "Path to the pre-trained model."
+    }, {
+        "name": "workspace",
+        "type": "str",
+        "default": "local_workspace",
+        "help": "The workspace directory."
+    }, {
+        "name": "seed",
+        "type": "int",
+        "default": 0,
+        "help": "The seed to set for NumPy, random, and PyTorch."
+    }, {
+        "name": "not_uncased",
+        "action": "store_false",
+        "dest": "uncased"
+    }, {
+        "name": "n_labels",
+        "type": "int",
+        "help": "The number of labels."
+    }, {
+        "name": "device",
+        "type": "str"
+    }, {
+        "name": "data_dir",
+        "type": "str"
+    }, {
+        "name": "task_name",
+        "type": "str"
+    }, {
+        "name": "do_test_only",
+        "action": "store_true"
+    }, {
+        "name": "no_train",
+        "action": "store_false",
+        "dest": "do_train"
+    }, {
+        "name": "eval_batch_size",
+        "type": "int"
+    }, {
+        "name": "visualize",
+        "action": "store_true"
+    }, {
+        "name": "train_file",
+        "type": "str"
+    }, {
+    	"name": "learning_rate",
+	    "type": "float"
+    }, {
+    	"name": "export",
+	    "type": "str"
+    }, {
+    	"name": "max_seq_length",
+	    "type": "int"
+    }, {
+    	"name": "train_batch_size",
+	    "type": "int"
+    }, {
+    	"name": "num_train_epochs",
+	    "type": "int"
     }
 ]

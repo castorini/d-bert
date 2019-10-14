@@ -1,0 +1,10 @@
+{
+    "_inherits_": "config.json",
+    "workspace": "local_sts_workspace",
+    "n_labels": 1,
+    "task_name": "sts",
+    "data_dir": "/home/anonymized/STS-B",
+    "model_file": "/home/anonymized/uncased_L-24_H-1024_A-16",
+    "export": "",
+    "eval_batch_size": 128
+}

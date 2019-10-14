@@ -1,0 +1,10 @@
+{
+    "_inherits_": "config.json",
+    "workspace": "local_large_workspace",
+    "n_labels": 2,
+    "task_name": "sst2",
+    "data_dir": "/home/anonymized/SST-2",
+    "model_file": "/home/anonymized/uncased_L-24_H-1024_A-16",
+    "export": "sst-logits.pt",
+    "eval_batch_size": 128
+}

@@ -1,0 +1,10 @@
+{
+    "_inherits_": "config.json",
+    "workspace": "rte-wkspc",
+    "n_labels": 2,
+    "task_name": "rte",
+    "data_dir": "/home/anonymized/RTE",
+    "model_file": "/home/anonymized/uncased_L-24_H-1024_A-16",
+    "export": "",
+    "eval_batch_size": 512
+}

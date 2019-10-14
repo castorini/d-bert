@@ -1,0 +1,6 @@
+{
+    "_inherits_": "config.json",
+    "n_labels": 2,
+    "task_name": "sst2",
+    "data_dir": "/home/anonymized/SST-2"
+}

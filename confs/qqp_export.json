@@ -1,0 +1,11 @@
+{
+    "_inherits_": "config.json",
+    "workspace": "qqp_2e-5",
+    "n_labels": 2,
+    "task_name": "raw_pair",
+    "data_dir": "qqp-1.7M-export",
+    "train_file": "train.tsv",
+    "model_file": "/home/anonymized/uncased_L-24_H-1024_A-16",
+    "export": "gpt2-qqp-logits.pt",
+    "eval_batch_size": 1024
+}

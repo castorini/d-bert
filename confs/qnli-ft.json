@@ -1,0 +1,10 @@
+{
+    "_inherits_": "config.json",
+    "workspace": "qnli-wkspc",
+    "n_labels": 2,
+    "task_name": "qnli",
+    "data_dir": "/home/anonymized/scratch/QNLI",
+    "model_file": "/home/anonymized/uncased_L-24_H-1024_A-16",
+    "export": "",
+    "eval_batch_size": 512
+}

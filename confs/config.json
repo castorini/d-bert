@@ -1,0 +1,22 @@
+{
+    "model_file": "/home/anonymized/uncased_L-24_H-1024_A-16",
+    "workspace": "local_workspace",
+    "seed": 0,
+    "uncased": true,
+    "do_train": true,
+    "do_eval": true,
+    "max_seq_length": 128,
+    "train_batch_size": 32,
+    "eval_batch_size": 8,
+    "learning_rate": 5E-5,
+    "num_train_epochs": 3,
+    "warmup_proportion": 0.1,
+    "gradient_accumulation_steps": 1,
+    "fp16": false,
+    "loss_scale": 0,
+    "visualize": false,
+    "do_test_only": false,
+    "export": null,
+    "train_file": "",
+    "no_cuda": false
+}

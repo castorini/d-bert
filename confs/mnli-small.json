@@ -1,0 +1,10 @@
+{
+    "_inherits_": "config.json",
+    "workspace": "mnli_wkspc5e-5",
+    "n_labels": 3,
+    "task_name": "mnli",
+    "data_dir": "mnli-export-mask-only-small",
+    "model_file": "/home/anonymized/uncased_L-24_H-1024_A-16",
+    "export": "mnli-export-logits-mask-only.pt",
+    "eval_batch_size": 512
+}

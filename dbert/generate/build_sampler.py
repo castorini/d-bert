@@ -9,7 +9,7 @@ import torch.utils.data as tud
 
 from .args import add_dict_options, opt, OptionEnum
 from .finetune_gpt import gpt_encode, EOS_TOKEN, sample_query
-from .finetune_transfo import sample_query as transfo_sample_query
+from .finetune_transfoxl import sample_query as transfo_sample_query
 from .utils import set_seed, dual_print
 
 
@@ -116,7 +116,7 @@ ARGS = [
     opt('--save', type=str, default='prefix_sampler.pt'),
     opt('--gpt2-model', type=str, default='gpt2'),
     opt('--transfo-model', type=str, default='transfo-xl-wt103'),
-    opt('--transfo', action='store_true')
+    opt('--model-type', type=str, choices=['gpt2', 'transfoxl'], default='transfoxl')
 ]
 
 
@@ -127,7 +127,7 @@ def main():
     set_seed(args.seed)
     sd = torch.load(args.cache_file)
 
-    if args.transfo:
+    if args.model_type == 'gpt2':
         tokenizer = GPT2Tokenizer.from_pretrained(args.gpt2_model)
         encode = tokenizer.encode
         decode = lambda x: tokenizer.decoder[x]

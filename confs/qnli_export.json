@@ -1,0 +1,11 @@
+{
+    "_inherits_": "config.json",
+    "workspace": "/home/anonymized/scratch/qnli-3e-5-wkspc",
+    "n_labels": 2,
+    "task_name": "raw_pair",
+    "data_dir": "800k-export",
+    "train_file": "train.tsv",
+    "model_file": "/home/anonymized/uncased_L-24_H-1024_A-16",
+    "export": "qnli-logits.pt",
+    "eval_batch_size": 1024
+}
