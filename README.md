@@ -1,5 +1,5 @@
 # D-BERT
-This repository provides implementations of our original BERT distillation technique, [Distilling Task-Specific Knowledge from BERT into Simple Neural Networks](https://arxiv.org/abs/1903.12136), and our more recent text generation-based method.
+This repository provides implementations of our original BERT distillation technique, [Distilling Task-Specific Knowledge from BERT into Simple Neural Networks](https://arxiv.org/abs/1903.12136), and our more recent text generation-based method, [Natural Language Generation for Effective Knowledge Distillation](http://ralphtang.com/papers/deeplo2019.pdf).
 The latter is more effective than the former at the cost of computational efficiency, requiring multiple GPUs to fine-tune Transformer-XL or GPT-2 for constructing the transfer set.
 Thus, we will henceforth refer to them as `d-lite` and `d-heavy`, respectively.
 
