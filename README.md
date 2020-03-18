@@ -4,7 +4,7 @@ The latter is more effective than the former, albeit at the cost of computationa
 Thus, we will henceforth refer to them as `d-lite` and `d-heavy`, respectively.
 
 The codebase admittedly is in a messy state; we plan to continue refactoring it.
-If you desire **just the data** from our second paper, you may download that [here](https://git.uwaterloo.ca/r33tang/distillation-data).
+If you desire **just the data** from our second paper, you may download that [here](http://nlp.rocks/dbert).
 
 ## Transfer Set Construction
 
