@@ -12,9 +12,12 @@ import torch.nn as nn
 import dbert.distill.data as dat
 import dbert.distill.model.bert as bt
 
+# nltk.download('punkt')
+# nltk.download('averaged_perceptron_tagger')
 
 def main():
     parser = argparse.ArgumentParser()
+    parser.add_argument("--batch-size", default=64, type=float) #added
     parser.add_argument("--mask_prob", default=0.1, type=float)
     parser.add_argument("--random_prob", default=0.1, type=float)
     parser.add_argument("--window_prob", default=0, type=float)
@@ -25,6 +28,8 @@ def main():
     parser.add_argument("--tokenizer", type=str, default="nltk", choices=["allennlp", "nltk"], 
         help="Use NLTK for now.")
     args = parser.parse_args()
+
+    print("args:", args)
 
     random.seed(args.seed) 
     df = pd.read_csv(args.dataset_file, sep="\t")
@@ -94,4 +99,5 @@ def main():
     
 
 if __name__ == "__main__":
+    print("bitch!")
     main()
