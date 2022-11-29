@@ -21,6 +21,7 @@ def main():
     parser.add_argument("--mask_prob", default=0.1, type=float)
     parser.add_argument("--random_prob", default=0.1, type=float)
     parser.add_argument("--window_prob", default=0, type=float)
+    parser.add_argument("--bert_gen_prob", default=0.2, type=float)
     parser.add_argument("--window_lengths", default=[1, 2, 3, 4, 5], nargs="+", type=int)
     parser.add_argument("--n_iter", default=20, type=int)
     parser.add_argument("--dataset_file", type=str)
