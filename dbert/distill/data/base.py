@@ -2,7 +2,7 @@ import torch
 import numpy as np
 import random
 
-from allennlp.data.tokenizers.word_tokenizer import WordTokenizer
+from allennlp.data.tokenizers import WordTokenizer
 from pytorch_pretrained_bert import tokenization as tok
 from pytorch_pretrained_bert import GPT2Tokenizer
 

@@ -1,0 +1,5 @@
+changing version of allennlp
+changing other lib versions -> literally didn't change anything
+pip install overrides==3.1.0 -> for None error 
+download two datasets from nltk
+arg errors
